@@ -5,7 +5,7 @@ import capitalizeString from './utils/capitalizeString'
 import jumpTo from '../../modules/Navigation'
 import LoadingAnimation from '../../components/loadingAnimation'
 import Header from '../../components/header/headerContainer'
-
+import {url} from "./components/Dropzone"
 
 export default class LoginSignin extends Component {
   constructor(props) {
@@ -64,7 +64,7 @@ export default class LoginSignin extends Component {
       
       //desestructurando los input
       const { imagePath, title, description, price, color, size, quantity, department, category } = this.inputText
-      this.props.submitAction(imagePath, title, description, price, color, size, quantity, department, category)////////////////////
+      this.props.submitAction(url, title, description, price, color, size, quantity, department, category)////////////////////
         .then(res => {  
           jumpTo('/dashboard')
           alert("GRACIAS POR CONFIAR EN NOSOTROS")
