@@ -5,6 +5,7 @@ import UploadModal from "./UploadModal"
 
 import styles from '../stylesheets/imageInput.module.sass'
 
+var url = ""
 const Dropzone = () => {
     const [selectedFile, setSelectedFile] = useState(null)
     const [uploadedImageURL, setUploadedImageURL] = useState("")
@@ -115,24 +116,24 @@ const Dropzone = () => {
                         const uploadPercentage = Math.floor(
                             (progressEvent.loaded / progressEvent.total) * 100
                         )
-                        uploadRef.current.innerHTML =
-                            "Tu archivo se cargo correctamente"
-                            setSelectedFile(null)
+                        //uploadRef.current.innerHTML = "Tu archivo se cargo correctamente"
+                        //setSelectedFile(null)
 
                     },
                 })
                 .then((res) => {
                     // In the response get the URL of the uploaded image
-                    const url = res.data.data.url
+                    url = res.data.data.url
                     alert(url);
                     setUploadedImageURL(url)
+                    //console.log(url);
                 })
                 .catch((error) => {
                     console.error(error.message)
                     // If theres an error display the message on the modal
                     uploadModalRef.current.innerHTML = `<span class="error">Error uploading file</span>`
                     // set progress to red
-                    progressRef.current.style.backgroundColor = "red"
+                    //progressRef.current.style.backgroundColor = "red"
                 })
         } else {
             alert("You have to drop/select an image in order to upload.")
@@ -185,4 +186,4 @@ const Dropzone = () => {
     )
 }
 
-export default Dropzone
+export { Dropzone, url }

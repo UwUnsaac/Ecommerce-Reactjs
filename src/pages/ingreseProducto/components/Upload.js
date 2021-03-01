@@ -1,6 +1,6 @@
 import React from "react"
 
-import Dropzone from "./Dropzone"
+import {Dropzone} from "./Dropzone"
 
 import styles from '../stylesheets/imageInput.module.sass'
 
@@ -14,5 +14,4 @@ const Upload = () => {
         </div>
     )
 }
-
 export default Upload
