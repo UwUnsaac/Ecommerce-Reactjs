@@ -48,7 +48,6 @@ export default class ProductOverview extends Component {
       jumpTo('/bag')
     })
   }
-
   render() {
     return (
       <div className={styles.outbox}>
@@ -89,9 +88,19 @@ export default class ProductOverview extends Component {
                       clickSize={this.clickSize}
                     />
                   </div>
+
+                  <div className={styles.titulotags}>
+                    TAGS:
+                  </div>
+                  <div className={styles.tagsinput}>              
+                  {this.props.product.category.map((tag, index) => (
+                    <li key={index} className={styles.tag}>
+                      <span className={styles.tagtitle}>{tag}</span>         
+                    </li>
+                  ))}
+                  </div>
                   <div className={styles.btns}>
-                    <button className={styles.btn} onClick={this.addToBag} type="button">Agregar a favoritos ❤</button>
-                 
+                    <button className={styles.btn} onClick={this.addToBag} type="button">Agregar a favoritos ❤</button>               
                   </div>
                 </div>
               </div>

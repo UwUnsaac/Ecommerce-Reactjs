@@ -20,7 +20,7 @@ export default function Search({
         <div className={styles.btn}>
           <button
             onClick={() => {
-              search(input_value).then(res => jumpTo('/dashboard'))
+              search(input_value.toLocaleLowerCase()).then(res => jumpTo('/dashboard'))
             }}
           >
             Buscar
