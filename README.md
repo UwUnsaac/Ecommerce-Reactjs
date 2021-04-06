@@ -5,6 +5,7 @@ Elaborada por estudiantes de la escuela profesional de Ingeniería Informática 
 Para el curso de Ingeniería de Software I en el semestre 2020-II.
 
 #### Código de back-end [aquí](https://github.com/UwUnsaac/Ecommerce-Nodejs)
+#### Artefactos usados [aquí] (https://git.io/JYFzc)
 
 ## Información general
 
